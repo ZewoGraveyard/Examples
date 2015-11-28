@@ -9,7 +9,7 @@ This repo contains examples that use **Zewo** swift Linux ready frameworks.
 
 ## Todo
 
-[Todo](https://github.com/Zewo/Examples/Todo) is an API that let's you manage your to-dos. It talks JSON. 
+[Todo](https://github.com/Zewo/Examples/tree/master/Todo) is an API that let's you manage your to-dos. It talks JSON. 
 
 License
 -------
