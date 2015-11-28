@@ -9,9 +9,10 @@ Todo
 
 ## Installation
 
-Install [Rome](https://github.com/neonichu/Rome), if you haven't already.
+Install [CocoaPods](https://cocoapods.org/) and [Rome](https://github.com/neonichu/Rome), if you haven't already.
 
 ```bash
+$ sudo gem install cocoapods
 $ gem install cocoapods-rome
 ```
 
