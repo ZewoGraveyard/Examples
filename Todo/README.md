@@ -7,6 +7,22 @@ Todo
 
 **Todo** is an API that let's you manage your to-dos. It talks JSON. 
 
+## Installation
+
+Install [Rome](https://github.com/neonichu/Rome), if you haven't already.
+
+```bash
+$ gem install cocoapods-rome
+```
+
+Then:
+
+```bash
+$ pod install
+```
+
+That's it!
+
 License
 -------
 
