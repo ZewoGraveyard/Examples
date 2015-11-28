@@ -1,0 +1,48 @@
+PODS:
+  - Epoch (0.4):
+    - HTTPParser
+    - Venice (= 0.9)
+  - HTTP (0.1):
+    - URI
+  - HTTPJSON (0.1):
+    - HTTP
+    - JSON
+  - HTTPMiddleware (0.1):
+    - HTTP
+  - HTTPParser (0.1):
+    - HTTP
+  - HTTPRouter (0.1):
+    - HTTP
+    - POSIXRegex
+  - JSON (0.2)
+  - JSONParserMiddleware (0.1):
+    - HTTPMiddleware
+    - JSON
+  - LoggerMiddleware (0.1):
+    - HTTPMiddleware
+  - POSIXRegex (0.1)
+  - URI (0.1)
+  - Venice (0.9)
+
+DEPENDENCIES:
+  - Epoch
+  - HTTPJSON
+  - HTTPRouter
+  - JSONParserMiddleware
+  - LoggerMiddleware
+
+SPEC CHECKSUMS:
+  Epoch: c5163d5c73cf91aebb9aa29a3a96229df137f396
+  HTTP: b55b09bd3ac5b7a1cca19fde46a9985ddafbce89
+  HTTPJSON: d138574d16e6dfa2f788a86503ffcb603db57282
+  HTTPMiddleware: 98b79d60c5ef40a5c7d932e25a3e79b88c4a0827
+  HTTPParser: 06e45d70cc98d0f4c6ce0a29e7218bc23a0bf02a
+  HTTPRouter: 465f6e9dd4e9fbf3e21feee00033460a597f2d85
+  JSON: 4c8be28bb26b14c13af94c1a10bedec7052c590d
+  JSONParserMiddleware: a59d7724979c4d801c2850d9ec5663faf5cbb73f
+  LoggerMiddleware: 5820cd2f9fa87e0628e86c35957eb20f636a0f23
+  POSIXRegex: cb8afbad28e34e10e27877a370516b443ea227db
+  URI: a182beddc56c5246e4b4ababd5106addb423cbe1
+  Venice: 7399bbcfca6c25469abb56db6468ad438ac65e8f
+
+COCOAPODS: 0.39.0

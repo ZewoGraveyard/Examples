@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0678A6A1C0A609D009C9BDA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678A691C0A609D009C9BDA /* main.swift */; };
+		B0678A821C0A6140009C9BDA /* TodoItem+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678A7F1C0A6140009C9BDA /* TodoItem+JSON.swift */; };
+		B0678A831C0A6140009C9BDA /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678A801C0A6140009C9BDA /* TodoItem.swift */; };
+		B0678A841C0A6140009C9BDA /* TodoResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678A811C0A6140009C9BDA /* TodoResource.swift */; };
+		B0678A911C0A61F6009C9BDA /* Epoch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A851C0A61F6009C9BDA /* Epoch.framework */; };
+		B0678A921C0A61F6009C9BDA /* Epoch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A851C0A61F6009C9BDA /* Epoch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678A931C0A61F6009C9BDA /* HTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A861C0A61F6009C9BDA /* HTTP.framework */; };
+		B0678A941C0A61F6009C9BDA /* HTTP.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A861C0A61F6009C9BDA /* HTTP.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678A951C0A61F6009C9BDA /* HTTPJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A871C0A61F6009C9BDA /* HTTPJSON.framework */; };
+		B0678A961C0A61F6009C9BDA /* HTTPJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A871C0A61F6009C9BDA /* HTTPJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678A971C0A61F6009C9BDA /* HTTPMiddleware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A881C0A61F6009C9BDA /* HTTPMiddleware.framework */; };
+		B0678A981C0A61F6009C9BDA /* HTTPMiddleware.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A881C0A61F6009C9BDA /* HTTPMiddleware.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678A991C0A61F6009C9BDA /* HTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A891C0A61F6009C9BDA /* HTTPParser.framework */; };
+		B0678A9A1C0A61F6009C9BDA /* HTTPParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A891C0A61F6009C9BDA /* HTTPParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678A9B1C0A61F6009C9BDA /* HTTPRouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8A1C0A61F6009C9BDA /* HTTPRouter.framework */; };
+		B0678A9C1C0A61F6009C9BDA /* HTTPRouter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8A1C0A61F6009C9BDA /* HTTPRouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678A9D1C0A61F6009C9BDA /* JSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8B1C0A61F6009C9BDA /* JSON.framework */; };
+		B0678A9E1C0A61F6009C9BDA /* JSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8B1C0A61F6009C9BDA /* JSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678A9F1C0A61F6009C9BDA /* JSONParserMiddleware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8C1C0A61F6009C9BDA /* JSONParserMiddleware.framework */; };
+		B0678AA01C0A61F6009C9BDA /* JSONParserMiddleware.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8C1C0A61F6009C9BDA /* JSONParserMiddleware.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678AA11C0A61F6009C9BDA /* LoggerMiddleware.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8D1C0A61F6009C9BDA /* LoggerMiddleware.framework */; };
+		B0678AA21C0A61F6009C9BDA /* LoggerMiddleware.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8D1C0A61F6009C9BDA /* LoggerMiddleware.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678AA31C0A61F7009C9BDA /* POSIXRegex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8E1C0A61F6009C9BDA /* POSIXRegex.framework */; };
+		B0678AA41C0A61F7009C9BDA /* POSIXRegex.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8E1C0A61F6009C9BDA /* POSIXRegex.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678AA51C0A61F7009C9BDA /* URI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8F1C0A61F6009C9BDA /* URI.framework */; };
+		B0678AA61C0A61F7009C9BDA /* URI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8F1C0A61F6009C9BDA /* URI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0678AA71C0A61F7009C9BDA /* Venice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A901C0A61F6009C9BDA /* Venice.framework */; };
+		B0678AA81C0A61F7009C9BDA /* Venice.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A901C0A61F6009C9BDA /* Venice.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0678A711C0A609E009C9BDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0678A5F1C0A609D009C9BDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0678A651C0A609D009C9BDA;
+			remoteInfo = Todo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B0678AA91C0A61F7009C9BDA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B0678AA61C0A61F7009C9BDA /* URI.framework in Embed Frameworks */,
+				B0678A941C0A61F6009C9BDA /* HTTP.framework in Embed Frameworks */,
+				B0678AA81C0A61F7009C9BDA /* Venice.framework in Embed Frameworks */,
+				B0678A9E1C0A61F6009C9BDA /* JSON.framework in Embed Frameworks */,
+				B0678AA41C0A61F7009C9BDA /* POSIXRegex.framework in Embed Frameworks */,
+				B0678A9C1C0A61F6009C9BDA /* HTTPRouter.framework in Embed Frameworks */,
+				B0678A961C0A61F6009C9BDA /* HTTPJSON.framework in Embed Frameworks */,
+				B0678A9A1C0A61F6009C9BDA /* HTTPParser.framework in Embed Frameworks */,
+				B0678AA21C0A61F6009C9BDA /* LoggerMiddleware.framework in Embed Frameworks */,
+				B0678A981C0A61F6009C9BDA /* HTTPMiddleware.framework in Embed Frameworks */,
+				B0678A921C0A61F6009C9BDA /* Epoch.framework in Embed Frameworks */,
+				B0678AA01C0A61F6009C9BDA /* JSONParserMiddleware.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B0678A661C0A609D009C9BDA /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0678A691C0A609D009C9BDA /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B0678A6B1C0A609E009C9BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0678A701C0A609E009C9BDA /* TodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0678A741C0A609E009C9BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0678A7F1C0A6140009C9BDA /* TodoItem+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TodoItem+JSON.swift"; sourceTree = "<group>"; };
+		B0678A801C0A6140009C9BDA /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		B0678A811C0A6140009C9BDA /* TodoResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoResource.swift; sourceTree = "<group>"; };
+		B0678A851C0A61F6009C9BDA /* Epoch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Epoch.framework; path = Rome/Epoch.framework; sourceTree = "<group>"; };
+		B0678A861C0A61F6009C9BDA /* HTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTTP.framework; path = Rome/HTTP.framework; sourceTree = "<group>"; };
+		B0678A871C0A61F6009C9BDA /* HTTPJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTTPJSON.framework; path = Rome/HTTPJSON.framework; sourceTree = "<group>"; };
+		B0678A881C0A61F6009C9BDA /* HTTPMiddleware.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTTPMiddleware.framework; path = Rome/HTTPMiddleware.framework; sourceTree = "<group>"; };
+		B0678A891C0A61F6009C9BDA /* HTTPParser.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTTPParser.framework; path = Rome/HTTPParser.framework; sourceTree = "<group>"; };
+		B0678A8A1C0A61F6009C9BDA /* HTTPRouter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTTPRouter.framework; path = Rome/HTTPRouter.framework; sourceTree = "<group>"; };
+		B0678A8B1C0A61F6009C9BDA /* JSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSON.framework; path = Rome/JSON.framework; sourceTree = "<group>"; };
+		B0678A8C1C0A61F6009C9BDA /* JSONParserMiddleware.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONParserMiddleware.framework; path = Rome/JSONParserMiddleware.framework; sourceTree = "<group>"; };
+		B0678A8D1C0A61F6009C9BDA /* LoggerMiddleware.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoggerMiddleware.framework; path = Rome/LoggerMiddleware.framework; sourceTree = "<group>"; };
+		B0678A8E1C0A61F6009C9BDA /* POSIXRegex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = POSIXRegex.framework; path = Rome/POSIXRegex.framework; sourceTree = "<group>"; };
+		B0678A8F1C0A61F6009C9BDA /* URI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URI.framework; path = Rome/URI.framework; sourceTree = "<group>"; };
+		B0678A901C0A61F6009C9BDA /* Venice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Venice.framework; path = Rome/Venice.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0678A641C0A609D009C9BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0678AA51C0A61F7009C9BDA /* URI.framework in Frameworks */,
+				B0678A931C0A61F6009C9BDA /* HTTP.framework in Frameworks */,
+				B0678AA71C0A61F7009C9BDA /* Venice.framework in Frameworks */,
+				B0678A9D1C0A61F6009C9BDA /* JSON.framework in Frameworks */,
+				B0678AA31C0A61F7009C9BDA /* POSIXRegex.framework in Frameworks */,
+				B0678A9B1C0A61F6009C9BDA /* HTTPRouter.framework in Frameworks */,
+				B0678A951C0A61F6009C9BDA /* HTTPJSON.framework in Frameworks */,
+				B0678A991C0A61F6009C9BDA /* HTTPParser.framework in Frameworks */,
+				B0678AA11C0A61F6009C9BDA /* LoggerMiddleware.framework in Frameworks */,
+				B0678A971C0A61F6009C9BDA /* HTTPMiddleware.framework in Frameworks */,
+				B0678A911C0A61F6009C9BDA /* Epoch.framework in Frameworks */,
+				B0678A9F1C0A61F6009C9BDA /* JSONParserMiddleware.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0678A6D1C0A609E009C9BDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0678A5E1C0A609D009C9BDA = {
+			isa = PBXGroup;
+			children = (
+				B0678AAA1C0A61FB009C9BDA /* Frameworks */,
+				B0678A681C0A609D009C9BDA /* Todo */,
+				B0678A731C0A609E009C9BDA /* TodoTests */,
+				B0678A671C0A609D009C9BDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0678A671C0A609D009C9BDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0678A661C0A609D009C9BDA /* Todo.app */,
+				B0678A701C0A609E009C9BDA /* TodoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0678A681C0A609D009C9BDA /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				B0678A7E1C0A6140009C9BDA /* Todo */,
+				B0678A691C0A609D009C9BDA /* main.swift */,
+				B0678A6B1C0A609E009C9BDA /* Info.plist */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		B0678A731C0A609E009C9BDA /* TodoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0678A741C0A609E009C9BDA /* Info.plist */,
+			);
+			path = TodoTests;
+			sourceTree = "<group>";
+		};
+		B0678A7E1C0A6140009C9BDA /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				B0678A7F1C0A6140009C9BDA /* TodoItem+JSON.swift */,
+				B0678A801C0A6140009C9BDA /* TodoItem.swift */,
+				B0678A811C0A6140009C9BDA /* TodoResource.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		B0678AAA1C0A61FB009C9BDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0678A851C0A61F6009C9BDA /* Epoch.framework */,
+				B0678A861C0A61F6009C9BDA /* HTTP.framework */,
+				B0678A871C0A61F6009C9BDA /* HTTPJSON.framework */,
+				B0678A881C0A61F6009C9BDA /* HTTPMiddleware.framework */,
+				B0678A891C0A61F6009C9BDA /* HTTPParser.framework */,
+				B0678A8A1C0A61F6009C9BDA /* HTTPRouter.framework */,
+				B0678A8B1C0A61F6009C9BDA /* JSON.framework */,
+				B0678A8C1C0A61F6009C9BDA /* JSONParserMiddleware.framework */,
+				B0678A8D1C0A61F6009C9BDA /* LoggerMiddleware.framework */,
+				B0678A8E1C0A61F6009C9BDA /* POSIXRegex.framework */,
+				B0678A8F1C0A61F6009C9BDA /* URI.framework */,
+				B0678A901C0A61F6009C9BDA /* Venice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0678A651C0A609D009C9BDA /* Todo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0678A771C0A609E009C9BDA /* Build configuration list for PBXNativeTarget "Todo" */;
+			buildPhases = (
+				B0678A631C0A609D009C9BDA /* Sources */,
+				B0678A641C0A609D009C9BDA /* Frameworks */,
+				B0678AA91C0A61F7009C9BDA /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Todo;
+			productName = Todo;
+			productReference = B0678A661C0A609D009C9BDA /* Todo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0678A6F1C0A609E009C9BDA /* TodoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0678A7A1C0A609E009C9BDA /* Build configuration list for PBXNativeTarget "TodoTests" */;
+			buildPhases = (
+				B0678A6C1C0A609E009C9BDA /* Sources */,
+				B0678A6D1C0A609E009C9BDA /* Frameworks */,
+				B0678A6E1C0A609E009C9BDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0678A721C0A609E009C9BDA /* PBXTargetDependency */,
+			);
+			name = TodoTests;
+			productName = TodoTests;
+			productReference = B0678A701C0A609E009C9BDA /* TodoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0678A5F1C0A609D009C9BDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Zewo;
+				TargetAttributes = {
+					B0678A651C0A609D009C9BDA = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					B0678A6F1C0A609E009C9BDA = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = B0678A651C0A609D009C9BDA;
+					};
+				};
+			};
+			buildConfigurationList = B0678A621C0A609D009C9BDA /* Build configuration list for PBXProject "Todo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B0678A5E1C0A609D009C9BDA;
+			productRefGroup = B0678A671C0A609D009C9BDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0678A651C0A609D009C9BDA /* Todo */,
+				B0678A6F1C0A609E009C9BDA /* TodoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0678A6E1C0A609E009C9BDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0678A631C0A609D009C9BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0678A821C0A6140009C9BDA /* TodoItem+JSON.swift in Sources */,
+				B0678A831C0A6140009C9BDA /* TodoItem.swift in Sources */,
+				B0678A6A1C0A609D009C9BDA /* main.swift in Sources */,
+				B0678A841C0A6140009C9BDA /* TodoResource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0678A6C1C0A609E009C9BDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0678A721C0A609E009C9BDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0678A651C0A609D009C9BDA /* Todo */;
+			targetProxy = B0678A711C0A609E009C9BDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B0678A751C0A609E009C9BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B0678A761C0A609E009C9BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B0678A781C0A609E009C9BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rome",
+				);
+				INFOPLIST_FILE = Todo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.Todo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0678A791C0A609E009C9BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rome",
+				);
+				INFOPLIST_FILE = Todo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.Todo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B0678A7B1C0A609E009C9BDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TodoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.TodoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Todo.app/Contents/MacOS/Todo";
+			};
+			name = Debug;
+		};
+		B0678A7C1C0A609E009C9BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TodoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zewo.TodoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Todo.app/Contents/MacOS/Todo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0678A621C0A609D009C9BDA /* Build configuration list for PBXProject "Todo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0678A751C0A609E009C9BDA /* Debug */,
+				B0678A761C0A609E009C9BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0678A771C0A609E009C9BDA /* Build configuration list for PBXNativeTarget "Todo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0678A781C0A609E009C9BDA /* Debug */,
+				B0678A791C0A609E009C9BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B0678A7A1C0A609E009C9BDA /* Build configuration list for PBXNativeTarget "TodoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0678A7B1C0A609E009C9BDA /* Debug */,
+				B0678A7C1C0A609E009C9BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0678A5F1C0A609D009C9BDA /* Project object */;
+}
