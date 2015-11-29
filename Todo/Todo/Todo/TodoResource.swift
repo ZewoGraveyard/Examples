@@ -8,9 +8,7 @@ final class TodoResource: HTTPResourceType {
     private var todoItems: [String: TodoItem] = [:]
 
     func index(request: HTTPRequest) -> HTTPResponse {
-        let json: JSON = [
-            "todoItems": .ArrayValue(todoItems.values.map(TodoItem.toJSON))
-        ]
+        let json: JSON = ["todoItems": JSON.from(todoItems.values.map(TodoItem.toJSON))]
         return HTTPResponse(status: .OK, json: json)
     }
 
@@ -37,7 +35,7 @@ final class TodoResource: HTTPResourceType {
         guard let json = request.JSONBody,
             title = json["title"]?.stringValue,
             done = json["done"]?.boolValue else {
-            return HTTPResponse(status: .BadRequest)
+                return HTTPResponse(status: .BadRequest)
         }
         todoItems[todoItem.id] = TodoItem(id: todoItem.id, title: title, done: done)
         return HTTPResponse(status: .NoContent)

@@ -14,8 +14,7 @@ extension TodoItem {
     }
 
     init?(json: JSON) {
-        guard let
-            title = json["title"]?.stringValue,
+        guard let title = json["title"]?.stringValue,
             id = json["id"]?.stringValue,
             done = json["done"]?.boolValue else {
                 return nil
