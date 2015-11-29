@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B0678A6A1C0A609D009C9BDA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678A691C0A609D009C9BDA /* main.swift */; };
-		B0678A821C0A6140009C9BDA /* TodoItem+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678A7F1C0A6140009C9BDA /* TodoItem+JSON.swift */; };
-		B0678A831C0A6140009C9BDA /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678A801C0A6140009C9BDA /* TodoItem.swift */; };
-		B0678A841C0A6140009C9BDA /* TodoResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0678A811C0A6140009C9BDA /* TodoResource.swift */; };
 		B0678A911C0A61F6009C9BDA /* Epoch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A851C0A61F6009C9BDA /* Epoch.framework */; };
 		B0678A921C0A61F6009C9BDA /* Epoch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A851C0A61F6009C9BDA /* Epoch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0678A931C0A61F6009C9BDA /* HTTP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A861C0A61F6009C9BDA /* HTTP.framework */; };
@@ -35,6 +32,9 @@
 		B0678AA61C0A61F7009C9BDA /* URI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A8F1C0A61F6009C9BDA /* URI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0678AA71C0A61F7009C9BDA /* Venice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A901C0A61F6009C9BDA /* Venice.framework */; };
 		B0678AA81C0A61F7009C9BDA /* Venice.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0678A901C0A61F6009C9BDA /* Venice.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B0D253821C0B655E002486D6 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D2537F1C0B655E002486D6 /* Todo.swift */; };
+		B0D253831C0B655E002486D6 /* Todo+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253801C0B655E002486D6 /* Todo+JSON.swift */; };
+		B0D253841C0B655E002486D6 /* TodoResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D253811C0B655E002486D6 /* TodoResources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,9 +78,6 @@
 		B0678A6B1C0A609E009C9BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0678A701C0A609E009C9BDA /* TodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0678A741C0A609E009C9BDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B0678A7F1C0A6140009C9BDA /* TodoItem+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TodoItem+JSON.swift"; sourceTree = "<group>"; };
-		B0678A801C0A6140009C9BDA /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
-		B0678A811C0A6140009C9BDA /* TodoResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoResource.swift; sourceTree = "<group>"; };
 		B0678A851C0A61F6009C9BDA /* Epoch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Epoch.framework; path = Rome/Epoch.framework; sourceTree = "<group>"; };
 		B0678A861C0A61F6009C9BDA /* HTTP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTTP.framework; path = Rome/HTTP.framework; sourceTree = "<group>"; };
 		B0678A871C0A61F6009C9BDA /* HTTPJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HTTPJSON.framework; path = Rome/HTTPJSON.framework; sourceTree = "<group>"; };
@@ -93,6 +90,9 @@
 		B0678A8E1C0A61F6009C9BDA /* POSIXRegex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = POSIXRegex.framework; path = Rome/POSIXRegex.framework; sourceTree = "<group>"; };
 		B0678A8F1C0A61F6009C9BDA /* URI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = URI.framework; path = Rome/URI.framework; sourceTree = "<group>"; };
 		B0678A901C0A61F6009C9BDA /* Venice.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Venice.framework; path = Rome/Venice.framework; sourceTree = "<group>"; };
+		B0D2537F1C0B655E002486D6 /* Todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		B0D253801C0B655E002486D6 /* Todo+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Todo+JSON.swift"; sourceTree = "<group>"; };
+		B0D253811C0B655E002486D6 /* TodoResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,9 +165,9 @@
 		B0678A7E1C0A6140009C9BDA /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				B0678A801C0A6140009C9BDA /* TodoItem.swift */,
-				B0678A7F1C0A6140009C9BDA /* TodoItem+JSON.swift */,
-				B0678A811C0A6140009C9BDA /* TodoResource.swift */,
+				B0D2537F1C0B655E002486D6 /* Todo.swift */,
+				B0D253801C0B655E002486D6 /* Todo+JSON.swift */,
+				B0D253811C0B655E002486D6 /* TodoResources.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -281,10 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0678A821C0A6140009C9BDA /* TodoItem+JSON.swift in Sources */,
-				B0678A831C0A6140009C9BDA /* TodoItem.swift in Sources */,
+				B0D253841C0B655E002486D6 /* TodoResources.swift in Sources */,
 				B0678A6A1C0A609D009C9BDA /* main.swift in Sources */,
-				B0678A841C0A6140009C9BDA /* TodoResource.swift in Sources */,
+				B0D253831C0B655E002486D6 /* Todo+JSON.swift in Sources */,
+				B0D253821C0B655E002486D6 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

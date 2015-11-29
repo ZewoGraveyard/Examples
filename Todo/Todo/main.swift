@@ -11,8 +11,8 @@ let router = HTTPRouter(basePath: "/api/v1") { route in
         return HTTPResponse(status: .OK, json: ["version": "1.0.0"])
     }
 
-    route.resources("/todo") { resources in
-        let todo = TodoResource()
+    route.resources("/todos") { resources in
+        let todo = TodoResources()
         resources.index(todo.index)
         resources.create(parseJSON >>> todo.create)
         resources.show(todo.show)

@@ -4,11 +4,16 @@ import HTTPJSON
 import JSON
 import JSONParserMiddleware
 
-final class TodoResource: HTTPResourceType {
-    private var todoItems: [String: TodoItem] = [:]
+final class TodoResources: HTTPResourceType {
+    private var todos: [String: Todo] = [:]
+    private var idCount = 0
+    
+    private func generateId() -> String {
+        return "\(idCount++)"
+    }
 
     func index(request: HTTPRequest) -> HTTPResponse {
-        let json: JSON = ["todoItems": JSON.from(todoItems.values.map(TodoItem.toJSON))]
+        let json: JSON = ["todos": JSON.from(todos.values.map(Todo.toJSON))]
         return HTTPResponse(status: .OK, json: json)
     }
 
@@ -16,20 +21,21 @@ final class TodoResource: HTTPResourceType {
         guard let json = request.JSONBody, title = json["title"]?.stringValue else {
             return HTTPResponse(status: .BadRequest)
         }
-        let todoItem = TodoItem(title: title)
-        todoItems[todoItem.id] = todoItem
-        return HTTPResponse(status: .OK, json: todoItem.toJSON())
+        let id = generateId()
+        let todo = Todo(id: id, title: title, done: false)
+        todos[id] = todo
+        return HTTPResponse(status: .OK, json: todo.toJSON())
     }
 
-    func show(request: HTTPRequest) -> HTTPResponse {
-        guard let todoItem = todoItems[request.parameters["id"]!] else {
+    func show(request: HTTPRequest, id: String) -> HTTPResponse {
+        guard let todo = todos[id] else {
             return HTTPResponse(status: .NotFound)
         }
-        return HTTPResponse(status: .OK, json: todoItem.toJSON())
+        return HTTPResponse(status: .OK, json: todo.toJSON())
     }
 
-    func update(request: HTTPRequest) -> HTTPResponse {
-        guard let todoItem = todoItems[request.parameters["id"]!] else {
+    func update(request: HTTPRequest, id: String) -> HTTPResponse {
+        guard todos[id] != nil else {
             return HTTPResponse(status: .NotFound)
         }
         guard let json = request.JSONBody,
@@ -37,15 +43,15 @@ final class TodoResource: HTTPResourceType {
             done = json["done"]?.boolValue else {
                 return HTTPResponse(status: .BadRequest)
         }
-        todoItems[todoItem.id] = TodoItem(id: todoItem.id, title: title, done: done)
+        todos[id] = Todo(id: id, title: title, done: done)
         return HTTPResponse(status: .NoContent)
     }
 
-    func destroy(request: HTTPRequest) -> HTTPResponse {
-        guard let todoItem = todoItems[request.parameters["id"]!] else {
+    func destroy(request: HTTPRequest, id: String) -> HTTPResponse {
+        guard todos[id] != nil else {
             return HTTPResponse(status: .NotFound)
         }
-        todoItems[todoItem.id] = nil
+        todos[id] = nil
         return HTTPResponse(status: .NoContent)
     }
 }
