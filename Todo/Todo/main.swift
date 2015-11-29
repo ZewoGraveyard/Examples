@@ -19,7 +19,7 @@ let router = HTTPRouter(basePath: "/api/v1") { route in
         resources.update(parseJSON >>> todo.update)
         resources.destroy(todo.destroy)
     }
-    } >>> log
+} >>> log
 
 let server = HTTPServer(port: 8080, responder: router)
 server.start()
