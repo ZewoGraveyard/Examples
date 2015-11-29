@@ -165,8 +165,8 @@
 		B0678A7E1C0A6140009C9BDA /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				B0678A7F1C0A6140009C9BDA /* TodoItem+JSON.swift */,
 				B0678A801C0A6140009C9BDA /* TodoItem.swift */,
+				B0678A7F1C0A6140009C9BDA /* TodoItem+JSON.swift */,
 				B0678A811C0A6140009C9BDA /* TodoResource.swift */,
 			);
 			path = Todo;
@@ -458,6 +458,7 @@
 				B0678A791C0A609E009C9BDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0678A7A1C0A609E009C9BDA /* Build configuration list for PBXNativeTarget "TodoTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +467,7 @@
 				B0678A7C1C0A609E009C9BDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

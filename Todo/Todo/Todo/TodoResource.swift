@@ -5,11 +5,11 @@ import JSON
 import JSONParserMiddleware
 
 final class TodoResource: HTTPResourceType {
-    private var todoItems: [TodoItem] = []
+    private var todoItems: [String: TodoItem] = [:]
 
     func index(request: HTTPRequest) -> HTTPResponse {
         let json: JSON = [
-            "todoItems": .ArrayValue(todoItems.map(TodoItem.toJSON))
+            "todoItems": .ArrayValue(todoItems.values.map(TodoItem.toJSON))
         ]
         return HTTPResponse(status: .OK, json: json)
     }
@@ -19,19 +19,19 @@ final class TodoResource: HTTPResourceType {
             return HTTPResponse(status: .BadRequest)
         }
         let todoItem = TodoItem(title: title)
-        todoItems.append(todoItem)
+        todoItems[todoItem.id] = todoItem
         return HTTPResponse(status: .OK, json: todoItem.toJSON())
     }
 
     func show(request: HTTPRequest) -> HTTPResponse {
-        guard let todoItem = todoItems.filter({$0.id == request.parameters["id"]!}).first else {
+        guard let todoItem = todoItems[request.parameters["id"]!] else {
             return HTTPResponse(status: .NotFound)
         }
         return HTTPResponse(status: .OK, json: todoItem.toJSON())
     }
 
     func update(request: HTTPRequest) -> HTTPResponse {
-        guard let (index, todoItem) = todoItems.enumerate().filter({$0.1.id == request.parameters["id"]}).first else {
+        guard let todoItem = todoItems[request.parameters["id"]!] else {
             return HTTPResponse(status: .NotFound)
         }
         guard let json = request.JSONBody,
@@ -39,17 +39,15 @@ final class TodoResource: HTTPResourceType {
             done = json["done"]?.boolValue else {
             return HTTPResponse(status: .BadRequest)
         }
-        let updatedTodoItem = TodoItem(id: todoItem.id, title: title, done: done)
-        todoItems.removeAtIndex(index)
-        todoItems.append(updatedTodoItem)
+        todoItems[todoItem.id] = TodoItem(id: todoItem.id, title: title, done: done)
         return HTTPResponse(status: .NoContent)
     }
 
     func destroy(request: HTTPRequest) -> HTTPResponse {
-        guard let (index, _) = todoItems.enumerate().filter({$0.1.id == request.parameters["id"]}).first else {
+        guard let todoItem = todoItems[request.parameters["id"]!] else {
             return HTTPResponse(status: .NotFound)
         }
-        todoItems.removeAtIndex(index)
+        todoItems[todoItem.id] = nil
         return HTTPResponse(status: .NoContent)
     }
 }

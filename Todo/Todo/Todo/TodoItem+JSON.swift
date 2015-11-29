@@ -2,12 +2,11 @@ import JSON
 
 extension TodoItem {
     func toJSON() -> JSON {
-        let json: JSON = [
+         return [
             "id": JSON.from(id),
             "title": JSON.from(title),
             "done": JSON.from(done)
         ]
-        return json
     }
 
     static func toJSON(todoItem: TodoItem) -> JSON {
