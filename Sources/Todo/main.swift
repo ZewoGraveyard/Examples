@@ -5,6 +5,9 @@ import HTTPMiddleware
 import LoggerMiddleware
 import JSONParserMiddleware
 import Epoch
+import CHTTPParser
+import CLibvenice
+import Glibc
 
 let router = HTTPRouter(basePath: "/api/v1") { route in
     route.get("/version") { _ in

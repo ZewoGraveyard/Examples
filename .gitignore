@@ -6,9 +6,11 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ## Build generated
+.build/
 build/
 DerivedData
 Carthage/
+Packages/
 
 ## Various settings
 *.pbxuser
@@ -26,8 +28,3 @@ xcuserdata
 *.moved-aside
 *.xcuserstate
 *.xcscmblueprint
-
-# CocoaPods
-#
-Pods/
-Rome/
