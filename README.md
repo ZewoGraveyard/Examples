@@ -1,20 +1,24 @@
 Zewo Examples
 =============
 
-[![Swift 2.1](https://img.shields.io/badge/Swift-2.1-orange.svg?style=flat)](https://developer.apple.com/swift/)
-[![Platforms OS X](https://img.shields.io/badge/Platforms-OS%20X-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Platforms Linux](https://img.shields.io/badge/Platforms-Linux-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://tldrlegal.com/license/mit-license)
 [![Slack Status](https://zewo-slackin.herokuapp.com/badge.svg)](https://zewo-slackin.herokuapp.com)
 
-This repo contains examples that use **Zewo** swift Linux ready frameworks.
+This repo contains examples using **Zewo**'s swift Linux frameworks.
 
 ## Installation
 
-Follow the instruction in the README in each example directory.
+```swift
+$ swift build
+```
+
+The executables will be inside the `.build` directory.
 
 ## Todo
 
-[Todo](https://github.com/Zewo/Examples/tree/master/Todo) is an API that let's you manage your to-dos. It talks JSON.
+**Todo** is a web API that let's you manage your to-dos. It talks JSON.
 
 ## Community
 

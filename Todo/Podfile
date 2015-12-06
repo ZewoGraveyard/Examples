@@ -1,9 +1,0 @@
-source 'https://github.com/Zewo/Specs.git'
-platform :osx, '10.9'
-plugin 'cocoapods-rome'
-
-pod 'Epoch'
-pod 'HTTPRouter'
-pod 'LoggerMiddleware'
-pod 'JSONParserMiddleware'
-pod 'HTTPJSON'
