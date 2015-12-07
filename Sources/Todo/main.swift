@@ -1,3 +1,8 @@
+#if os(Linux)
+    import Glibc
+#else
+    import Darwin.C
+#endif
 import HTTP
 import HTTPRouter
 import HTTPJSON
@@ -7,11 +12,10 @@ import JSONParserMiddleware
 import Epoch
 import CHTTPParser
 import CLibvenice
-import Glibc
 
-let router = HTTPRouter("/api/v1") { route in
+let router = Router("/api/v1") { route in
     route.get("/version") { _ in
-        return HTTPResponse(status: .OK, json: ["version": "1.0.0"])
+        return Response(status: .OK, json: ["version": "1.0.0"])
     }
 
     let todo = TodoResources()
@@ -22,4 +26,4 @@ let router = HTTPRouter("/api/v1") { route in
     route.delete("/todos/:id", todo.destroy)
 } >>> log
 
-HTTPServer(port: 8080, responder: router).start()
+Server(port: 8080, responder: router).start()
