@@ -9,20 +9,17 @@ import CHTTPParser
 import CLibvenice
 import Glibc
 
-let router = HTTPRouter(basePath: "/api/v1") { route in
+let router = HTTPRouter("/api/v1") { route in
     route.get("/version") { _ in
         return HTTPResponse(status: .OK, json: ["version": "1.0.0"])
     }
 
-    route.resources("/todos") { resources in
-        let todo = TodoResources()
-        resources.index(todo.index)
-        resources.create(parseJSON >>> todo.create)
-        resources.show(todo.show)
-        resources.update(parseJSON >>> todo.update)
-        resources.destroy(todo.destroy)
-    }
+    let todo = TodoResources()
+    route.get("/todos", todo.index)
+    route.post("/todos", parseJSON >>> todo.create)
+    route.get("/todos/:id", todo.show)
+    route.put("/todos/:id", parseJSON >>> todo.update)
+    route.delete("/todos/:id", todo.destroy)
 } >>> log
 
-let server = HTTPServer(port: 8080, responder: router)
-server.start()
+HTTPServer(port: 8080, responder: router).start()

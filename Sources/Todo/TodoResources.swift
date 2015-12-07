@@ -4,7 +4,7 @@ import HTTPJSON
 import JSON
 import JSONParserMiddleware
 
-final class TodoResources: HTTPResourceType {
+final class TodoResources {
     private var todos: [String: Todo] = [:]
     private var idCount = 0
     
@@ -27,15 +27,15 @@ final class TodoResources: HTTPResourceType {
         return HTTPResponse(status: .OK, json: todo.toJSON())
     }
 
-    func show(request: HTTPRequest, id: String) -> HTTPResponse {
-        guard let todo = todos[id] else {
+    func show(request: HTTPRequest) -> HTTPResponse {
+        guard let id = request.parameters["id"], todo = todos[id] else {
             return HTTPResponse(status: .NotFound)
         }
         return HTTPResponse(status: .OK, json: todo.toJSON())
     }
 
-    func update(request: HTTPRequest, id: String) -> HTTPResponse {
-        guard todos[id] != nil else {
+    func update(request: HTTPRequest) -> HTTPResponse {
+        guard let id = request.parameters["id"] where todos[id] != nil else {
             return HTTPResponse(status: .NotFound)
         }
         guard let json = request.JSONBody,
@@ -47,8 +47,8 @@ final class TodoResources: HTTPResourceType {
         return HTTPResponse(status: .NoContent)
     }
 
-    func destroy(request: HTTPRequest, id: String) -> HTTPResponse {
-        guard todos[id] != nil else {
+    func destroy(request: HTTPRequest) -> HTTPResponse {
+        guard let id = request.parameters["id"] where todos[id] != nil else {
             return HTTPResponse(status: .NotFound)
         }
         todos[id] = nil
