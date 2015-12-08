@@ -7,6 +7,7 @@ let package = Package(
         .Package(url: "https://github.com/Zewo/HTTPRouter.git", majorVersion: 0, minor: 1),
         .Package(url: "https://github.com/Zewo/LoggerMiddleware.git", majorVersion: 0, minor: 1),
         .Package(url: "https://github.com/Zewo/JSONParserMiddleware.git", majorVersion: 0, minor: 1),
-        .Package(url: "https://github.com/Zewo/HTTPJSON.git", majorVersion: 0, minor: 1)
+        .Package(url: "https://github.com/Zewo/HTTPJSON.git", majorVersion: 0, minor: 1),
+        .Package(url: "https://github.com/Zewo/OpenSSL.git", majorVersion: 0, minor: 1)
 	]
 )

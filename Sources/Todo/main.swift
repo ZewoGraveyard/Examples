@@ -10,6 +10,9 @@ import HTTPMiddleware
 import LoggerMiddleware
 import JSONParserMiddleware
 import Epoch
+import SSL
+import OpenSSL
+import Venice
 import CHTTPParser
 import CLibvenice
 
@@ -25,5 +28,16 @@ let router = Router("/api/v1") { route in
     route.put("/todos/:id", parseJSON >>> todo.update)
     route.delete("/todos/:id", todo.destroy)
 } >>> log
+
+co {
+    let server = Server(port: 8081, responder: router) { options in
+        OpenSSL.initialize()
+        options.SSL = try? SSLServerContext(
+            certificate: "absolute path to your certificate",
+            privateKey: "absolute path to your private key"
+        )
+    }
+    server.start()
+}
 
 Server(port: 8080, responder: router).start()
