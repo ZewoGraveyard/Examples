@@ -7,8 +7,6 @@ import CHTTPParser
 import CLibvenice
 
 import Epoch
-import Router
-import Middleware
 import OpenSSL
 import Venice
 
