@@ -14,11 +14,6 @@ import Venice
 
 OpenSSL.initialize()
 
-let router = Router { route in
-    route.router("/api", APIv1)
-    route.router("/api", APIv2)
-} >>> log
-
 co(Server(port: 8081, responder: router) { options in
     options.SSL = try? SSLServerContext(
         certificate: "/absolute/path/to/csr.pem",
