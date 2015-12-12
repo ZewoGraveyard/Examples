@@ -1,4 +1,4 @@
-import JSON
+import Core
 
 extension Todo {
     func toJSON() -> JSON {

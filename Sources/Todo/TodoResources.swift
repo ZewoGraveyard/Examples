@@ -1,8 +1,8 @@
+import Core
 import HTTP
-import HTTPRouter
-import HTTPJSON
-import JSON
-import JSONParserMiddleware
+import Middleware
+
+let todo = TodoResources()
 
 final class TodoResources {
     private var todos: [String: Todo] = [:]
