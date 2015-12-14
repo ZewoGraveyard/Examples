@@ -2,12 +2,12 @@ import Core
 import HTTP
 import Middleware
 
-let todo = TodoResources()
+let todoResources = TodoResources()
 
 final class TodoResources {
-    private var todos: [String: Todo] = [:]
+    var todos: [String: Todo] = [:]
+    
     private var idCount = 0
-
     private func generateId() -> String {
         return "\(idCount++)"
     }

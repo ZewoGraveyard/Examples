@@ -13,4 +13,3 @@ extension Todo {
         return todo.toJSON()
     }
 }
-
