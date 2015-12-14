@@ -5,7 +5,7 @@ let webSocketServer = WebSocketServer { webSocket in
         switch event {
         case .Text(let text):
             if text == "todos" {
-                let todos = todoResources.todos.values
+                let todos = todoResources.todos.all
                 if todos.count == 0 {
                      webSocket.send("You have no todos. Taking some time off? (:")
                 }
@@ -15,7 +15,7 @@ let webSocketServer = WebSocketServer { webSocket in
             }
 
             if text == "done" {
-                let doneTodos = todoResources.todos.values.filter({ $0.done })
+                let doneTodos = todoResources.todos.all.filter({ $0.done })
                 for todo in doneTodos {
                     webSocket.send("\(todo)")
                 }

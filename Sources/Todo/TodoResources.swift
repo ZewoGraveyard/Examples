@@ -5,15 +5,10 @@ import Middleware
 let todoResources = TodoResources()
 
 final class TodoResources {
-    var todos: [String: Todo] = [:]
-    
-    private var idCount = 0
-    private func generateId() -> String {
-        return "\(idCount++)"
-    }
+    let todos = try! TodoRepository()
 
     func index(request: Request) -> Response {
-        let json: JSON = ["todos": JSON.from(todos.values.map(Todo.toJSON))]
+        let json: JSON = ["todos": JSON.from(todos.all.map(Todo.toJSON))]
         return Response(status: .OK, json: json)
     }
 
@@ -21,9 +16,7 @@ final class TodoResources {
         guard let json = request.JSONBody, title = json["title"]?.stringValue else {
             return Response(status: .BadRequest)
         }
-        let id = generateId()
-        let todo = Todo(id: id, title: title, done: false)
-        todos[id] = todo
+        let todo = todos.insert(title, done: false)
         return Response(status: .OK, json: todo.toJSON())
     }
 
