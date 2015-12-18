@@ -18,7 +18,14 @@ The executables will be inside the `.build` directory.
 
 ## Todo
 
-**Todo** is a web API that let's you manage your to-dos. It talks JSON.
+**Todo** is a web aplication that let's you manage your to-dos.
+
+### Instructions
+
+- Install all dependencies
+- Run `swift build`
+- Copy the executable to the example root directory `cp .build/debug/Todo Todo`
+- Run the application `./Todo`
 
 ## Community
 
