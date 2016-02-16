@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Open-source library for building fast, concurrent web servers using Swift">
+		<meta name="author" content="Zewo">
+		<link rel="icon" href="favicon.ico">
+		<title>Zewo</title>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/css/tether.min.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/xcode.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/styles/main.css">
+	</head>
+	<body>
+		<div class="pos-f-t">
+			<nav class="navbar navbar-static-top navbar-dark">
+				<div class="container">
+					<a class="navbar-brand" href="/">
+						<img class="logo-small" src="/assets/images/logo-small.png" srcset="/assets/images/logo-small.png 1x, /assets/images/logo-small@2x.png 2x, /assets/images/logo-small@3x.png 3x" alt="Logo">
+						<div class="logo-small-caption">Zewo</div>
+					</a>
+					<div class="pull-xs-right">
+						<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header">
+							&#9776;
+						</button>
+						<div class="hidden-xs-down">
+							<ul class="nav navbar-nav">
+								<li class="nav-item">
+									<a class="nav-link" href="https://github.com/Zewo"><i class="fa fa-github"></i> Github</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="http://docs.zewo.io"><i class="fa fa-book"></i> Docs</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="http://slack.zewo.io"><i class="fa fa-slack"></i> Slack</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="https://twitter.com/codezewo"><i class="fa fa-twitter"></i> Twitter</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="mailto:hello@zewo.io"><i class="fa fa-envelope"></i> Contact</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		    </nav>
+			<div class="collapse" id="navbar-header">
+				<div class="container-fluid bg-inverse p-a-1">
+					<ul class="nav navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="https://github.com/Zewo"><i class="fa fa-github"></i> Github</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://docs.zewo.io"><i class="fa fa-book"></i> Docs</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="http://slack.zewo.io"><i class="fa fa-slack"></i> Slack</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://twitter.com/codezewo"><i class="fa fa-twitter"></i> Twitter</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="mailto:hello@zewo.io"><i class="fa fa-envelope"></i> Contact</a>
+						</li>
+					</ul>
+				</div>
+	        </div>
+		</div>
+		<div class="hero">
+			<div class="hero-caption container">
+				<img id="logo-large" src="/assets/images/logo-large.png" srcset="/assets/images/logo-large.png 1x, /assets/images/logo-large@2x.png 2x, /assets/images/logo-large@3x.png 3x" alt="Logo">
+				<h2>Zewo</h2>
+				<h1>Build server software in Swift</h1>
+				<h3>Zewo is a set of open source libraries that help you build <br class="hero-caption-break">modern and blazing fast server software.</h3>
+				<a href="https://github.com/Zewo">
+					<img class="github-button" src="/assets/images/get-started-on-github.svg" alt="Github">
+				</a>
+			</div>
+		</div>
+		<div class="marketing">
+			<div class="row featurette">
+				<div class="container">
+					<div class="col-md-4">
+						<img class="featurette-image center-block" src="/assets/images/feature-linux.svg" alt="Linux ready">
+					</div>
+					<div class="col-md-8">
+						<h2>Linux ready</h2>
+						<h3>Compiled Swift, running on your Linux distribution.</h3>
+						<p>As Swift is open source and capable of running on Linux, you can easily deploy Zewo on AWS, DigitalOcean, or any of your other favorite cloud infrastructure provider.</p>
+					</div>
+					<div class="col-md-12 snippet-row">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+					    	<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active">Solo</li>
+								<li data-target="#myCarousel" data-slide-to="1">Epoch + Router</li>
+							</ol>
+							<div class="carousel-inner" role="listbox">
+								<div class="carousel-item active" style="padding: 1rem;">
+									<div style="text-align: center; padding-bottom: 1rem;">
+										You can use Epoch without any extra dependencies if you wish.
+									</div>
+									<pre><code class="hljs swift">#if os(Linux)
+    import Glibc
+#else
+    import Darwin.C
+#endif
+import HTTP
+<span data-toggle="tooltip" title="Default tooltip">import Epoch</span>
+import CHTTPParser
+import CLibvenice
+
+struct ServerResponder: ResponderType {
+    func respond(request: Request) -> Response {
+        // do something based on the Request
+        return Response(status: .OK)
+    }
+}
+
+let responder = ServerResponder()
+let server = Server(port: 8080, responder: responder)
+server.start()</code></pre>
+					        	</div>
+								<div class="carousel-item" style="padding: 1rem;">
+									<div style="text-align: center; padding-bottom: 1rem;">
+										You'll probably need an HTTP router to make things easier. Epoch and Router were designed to work with each other seamlessly.
+									</div>
+									<pre><code class="hljs swift">#if os(Linux)
+    import Glibc
+#else
+    import Darwin.C
+#endif
+import HTTP
+import Router
+import Epoch
+import CHTTPParser
+import CLibvenice
+
+let router = Router { router in
+    router.post("/users") { request in
+        // do something based on the Request
+        return Response(status: .Created)
+    }
+
+    router.get("/users/:id") { request in
+        let id = request.parameters["id"]
+        // do something based on the Request and id
+        return Response(status: .OK)
+    } 
+}
+
+let server = Server(port: 8080, responder: router)
+server.start()</code></pre>
+					        	</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row featurette alt">
+				<div class="container">
+					<div class="col-md-4 col-md-push-8">
+						<img class="featurette-image center-block" src="/assets/images/feature-concurrency.svg" alt="Concurrency with Venice">
+					</div>
+					<div class="col-md-7 col-md-pull-3">
+						<h2>Go-style concurrency</h2>
+						<h3>Concurrent programming without callbacks</h3>
+						<p>
+							What many have come to love with the <a href="https://golang.org" target="_blank">Go</a> programming language is its concurrency model. Go uses <a href="https://en.wikipedia.org/wiki/Communicating_sequential_processes" target="_blank">CSP</a> (Communicating Sequential Processes), which is something that Zewo brings to Swift using <a href="http://libmill.org" target="_blank">libmill</a>. Say goodbye to callback hell, and meet your new favourite way of building concurrent software!
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row featurette">
+				<div class="container">
+					<div class="col-md-4">
+						<img class="featurette-image center-block" src="/assets/images/feature-docker.svg" alt="Docker support">
+					</div>
+					<div class="col-md-8">
+						<h2>Ship your code safely</h2>
+						<h3>Containers for each version</h3>
+						<p>Swift is a living language that improves at a fast rate. Zewo provides you with utilities, such as Docker images for each release, so you can deploy your code safely.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row featurette alt">
+				<div class="container">
+					<div class="col-md-4 col-md-push-8">
+						<img class="featurette-image center-block" src="/assets/images/feature-mit.svg" alt="MIT Licensed">
+					</div>
+					<div class="col-md-7 col-md-pull-3">
+						<h2>MIT Licensed</h2>
+						<h3>Contribute to everyone, without reservation.</h3>
+						<p>The entire Zewo code base is licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT</a>. By contributing to Zewo you are contributing to an open and engaged community of brilliant Swift programmers. Join us on <a href="http://slack.zewo.io" target="_blank">Slack</a> to get to know us!</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<footer class="footer navbar-dark">
+			<p>&copy; 2016 Zewo</p>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/languages/swift.min.js"></script>
+		<script src="https://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		<script>
+			$('.hljs').each(function(i, block) {
+				hljs.highlightBlock(block);
+			});
+			
+			$('[data-toggle="tooltip"]').tooltip({
+				placement: "right"
+			});
+		</script>
+	</body>
+</html>
