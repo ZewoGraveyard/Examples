@@ -1,4 +1,4 @@
-import HTTPServer
+import Zewo
 
 let log = Log()
 let logger = LogMiddleware(log: log)
